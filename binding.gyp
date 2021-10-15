@@ -1,7 +1,7 @@
 {
 	"targets": [
 		{
-			"target_name": "collections",
+			"target_name": "inspectPromise",
 			"sources": [
 				"lib/binding.cc"
 			]

@@ -3,7 +3,7 @@ interface Binding {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const binding = require(require.resolve('../build/Release/collections.node')) as Binding;
+const binding = require(require.resolve('../build/Release/inspectPromise.node')) as Binding;
 
 export enum PromiseState {
 	/**

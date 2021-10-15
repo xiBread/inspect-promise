@@ -35,4 +35,4 @@ void Init(Local<Object> exports)
 		FunctionTemplate::New(isolate, InspectPromise)->GetFunction(context).ToLocalChecked());
 }
 
-NODE_MODULE(collections, Init);
+NODE_MODULE(inspectPromise, Init);
