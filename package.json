@@ -21,6 +21,10 @@
 		"prettier": "prettier -w src"
 	},
 	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xiBread/inspect-promise.git"
+	},
 	"license": "UNLICENSED",
 	"keywords": [
 		"promise",
