@@ -1,6 +1,6 @@
 {
 	"name": "inspect-promise",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Reimplements Node's `util.getPromiseDetails()`",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
