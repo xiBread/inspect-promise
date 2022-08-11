@@ -1,118 +1,20 @@
 {
-    "env": {
-        "node": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "prettier",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "plugins": [
-        "@typescript-eslint/eslint-plugin"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {
-        "brace-style": [
-            2,
-            "1tbs"
-        ],
-        "consistent-return": 0,
-        "default-param-last": 2,
-        "no-else-return": [
-            2,
-            {
-                "allowElseIf": false
-            }
-        ],
-        "no-empty": [
-            1,
-            {
-                "allowEmptyCatch": true
-            }
-        ],
-        "no-invalid-this": 0,
-        "no-throw-literal": 2,
-        "no-trailing-spaces": 2,
-        "no-useless-concat": 2,
-        "prefer-exponentiation-operator": 2,
-        "prefer-regex-literals": 2,
-        "@typescript-eslint/array-type": [
-            2,
-            {
-                "default": "array"
-            }
-        ],
-        "@typescript-eslint/ban-ts-comment": 0,
-        "@typescript-eslint/consistent-indexed-object-style": [
-            2,
-            "record"
-        ],
-        "@typescript-eslint/consistent-type-assertions": [
-            2,
-            {
-                "assertionStyle": "as",
-                "objectLiteralTypeAssertions": "allow"
-            }
-        ],
-        "@typescript-eslint/consistent-type-definitions": [
-            1,
-            "interface"
-        ],
-        "@typescript-eslint/consistent-type-imports": [
-            2,
-            {
-                "prefer": "type-imports"
-            }
-        ],
-        "@typescript-eslint/explicit-function-return-type": 1,
-        "@typescript-eslint/explicit-module-boundary-types": 0,
-        "@typescript-eslint/member-delimiter-style": 2,
-        "@typescript-eslint/method-signature-style": [
-            2,
-            "method"
-        ],
-        "@typescript-eslint/naming-convention": [
-            2,
-            {
-                "selector": [
-                    "enum",
-                    "enumMember",
-                    "interface",
-                    "typeAlias",
-                    "typeParameter"
-                ],
-                "format": [
-                    "PascalCase"
-                ],
-                "leadingUnderscore": "forbid",
-                "trailingUnderscore": "forbid"
-            }
-        ],
-        "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/no-invalid-this": [
-            2,
-            {
-                "capIsConstructor": false
-            }
-        ],
-        "@typescript-eslint/no-non-null-assertion": 0,
-        "@typescript-eslint/no-unnecessary-boolean-literal-compare": 2,
-        "@typescript-eslint/no-unnecessary-condition": [
-            2,
-            {
-                "allowConstantLoopConditions": true
-            }
-        ],
-        "@typescript-eslint/no-unnecessary-type-constraint": 2,
-        "@typescript-eslint/non-nullable-type-assertion-style": 2,
-        "@typescript-eslint/prefer-for-of": 2,
-        "@typescript-eslint/prefer-readonly": 2,
-        "@typescript-eslint/prefer-string-starts-ends-with": 2,
-        "@typescript-eslint/type-annotation-spacing": 2,
-        "@typescript-eslint/unified-signatures": 1
-    }
+	"env": {
+		"node": true,
+		"es2022": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/strict",
+		"prettier"
+	],
+	"plugins": [
+		"@typescript-eslint/eslint-plugin"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": "./tsconfig.json"
+	}
 }
