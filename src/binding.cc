@@ -26,13 +26,13 @@ void InspectPromise(const FunctionCallbackInfo<Value> &args)
 
 void Init(Local<Object> exports)
 {
-	Local<Context> context = exports->GetCreationContext().ToLocalChecked();
-	Isolate *isolate = context->GetIsolate();
+	Local<Context> ctx = exports->GetCreationContext().ToLocalChecked();
+	Isolate *isolate = ctx->GetIsolate();
 
 	(void)exports->Set(
-		context,
+		ctx,
 		String::NewFromUtf8(isolate, "inspectPromise").ToLocalChecked(),
-		FunctionTemplate::New(isolate, InspectPromise)->GetFunction(context).ToLocalChecked());
+		FunctionTemplate::New(isolate, InspectPromise)->GetFunction(ctx).ToLocalChecked());
 }
 
 NODE_MODULE(inspectPromise, Init);

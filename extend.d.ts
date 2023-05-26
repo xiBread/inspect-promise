@@ -1,4 +1,4 @@
-import type { PromiseDetails } from './src';
+import type { PromiseDetails } from "./lib";
 
 declare global {
 	interface PromiseConstructor {

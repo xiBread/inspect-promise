@@ -1,11 +1,11 @@
 interface Binding {
-	inspectPromise(promise: Promise<any>): [number, any];
+	inspectPromise(promise: Promise<unknown>): [number, unknown];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const binding = require(require.resolve('../build/Release/inspectPromise.node')) as Binding;
+const binding = require(require.resolve("../build/Release/inspectPromise.node")) as Binding;
 
-export type PromiseState = 'pending' | 'fulfilled' | 'rejected';
+export type PromiseState = "pending" | "fulfilled" | "rejected";
 
 export interface PromiseDetails<T> {
 	/**
@@ -24,7 +24,7 @@ export interface PromiseDetails<T> {
 	value: T | undefined;
 }
 
-const states = ['pending', 'fulfilled', 'rejected'] as const;
+const states = ["pending", "fulfilled", "rejected"] as const;
 
 /**
  * Synchronously inspect the details of a Promise.
@@ -42,7 +42,7 @@ export function inspectPromise<T>(promise: Promise<T>): PromiseDetails<T> {
 
 	return {
 		state: states[state],
-		value,
+		value: value as T,
 	};
 }
 

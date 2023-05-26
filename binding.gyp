@@ -3,7 +3,7 @@
 		{
 			"target_name": "inspectPromise",
 			"sources": [
-				"lib/binding.cc"
+				"src/binding.cc"
 			]
 		}
 	]
