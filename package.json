@@ -25,7 +25,7 @@
 		"type": "git",
 		"url": "https://github.com/xiBread/inspect-promise.git"
 	},
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"keywords": [
 		"promise",
 		"inspect",
