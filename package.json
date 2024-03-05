@@ -2,8 +2,9 @@
 	"name": "inspect-promise",
 	"version": "2.0.1",
 	"description": "Reimplements Node's `util.getPromiseDetails()`",
-	"main": "dist/index.js",
-	"typings": "dist/index.d.ts",
+	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
+	"main": "./dist/index.js",
+	"typings": "./dist/index.d.ts",
 	"exports": {
 		".": "./dist/index.js",
 		"./extend": "./dist/extend.js"
@@ -14,13 +15,12 @@
 		"binding.gyp"
 	],
 	"scripts": {
-		"build": "rimraf dist && tsc --build && node-gyp rebuild",
+		"build": "rm -r dist && tsc --build && node-gyp rebuild",
 		"style": "npm run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "npm run lint -- --fix",
 		"prettier": "prettier -w src"
 	},
-	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/xiBread/inspect-promise.git"
@@ -36,6 +36,11 @@
 		"node",
 		"node-gyp"
 	],
+	"prettier": {
+		"printWidth": 100,
+		"tabWidth": 4,
+		"useTabs": true
+	},
 	"devDependencies": {
 		"@types/node": "^20.11.24",
 		"@typescript-eslint/eslint-plugin": "^7.1.1",
