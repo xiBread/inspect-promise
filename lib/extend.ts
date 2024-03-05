@@ -1,5 +1,5 @@
-import type { PromiseDetails } from './';
-import { inspectPromise } from './';
+import type { PromiseDetails } from "./";
+import { inspectPromise } from "./";
 
 declare global {
 	interface PromiseConstructor {
