@@ -9,6 +9,8 @@
 		"outDir": "dist",
 		"strict": true,
 		"skipLibCheck": true,
+		"declaration": true,
+		"declarationDir": "dist",
 	},
 	"include": [
 		"lib/*"
