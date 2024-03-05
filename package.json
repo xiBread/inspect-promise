@@ -15,7 +15,7 @@
 		"binding.gyp"
 	],
 	"scripts": {
-		"build": "rm -r dist && tsc --build && node-gyp rebuild",
+		"build": "rm -rf dist && tsc --build && node-gyp rebuild",
 		"style": "npm run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "npm run lint -- --fix",
