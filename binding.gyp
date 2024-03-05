@@ -1,10 +1,11 @@
 {
 	"targets": [
 		{
-			"target_name": "inspectPromise",
+			"target_name": "<(module_name)",
 			"sources": [
 				"src/binding.cc"
-			]
+			],
+			"product_dir": "<(module_name)"
 		}
 	]
 }

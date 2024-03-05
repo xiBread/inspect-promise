@@ -42,6 +42,17 @@
 		"tabWidth": 4,
 		"useTabs": true
 	},
+	"binary": {
+		"module_name": "inspect_promise",
+		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
+		"host": "https://github.com/xiBread/inspect-promise/releases/download/",
+		"remote_path": "v{version}",
+		"package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}.tar.gz",
+		"pkg_path": "."
+	},
+	"dependencies": {
+		"@mapbox/node-pre-gyp": "^1.0.11"
+	},
 	"devDependencies": {
 		"@types/node": "^20.11.24",
 		"@typescript-eslint/eslint-plugin": "^7.1.1",
