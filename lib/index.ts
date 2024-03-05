@@ -5,7 +5,7 @@ interface Binding {
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const binding = require(require.resolve("../build/Release/inspectPromise.node")) as Binding;
 
-export type PromiseState = "pending" | "fulfilled" | "rejected";
+export type PromiseState = (typeof states)[number];
 
 export interface PromiseDetails<T> {
 	/**
