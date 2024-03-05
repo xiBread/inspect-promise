@@ -1,6 +1,6 @@
 {
 	"name": "inspect-promise",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Reimplements Node's `util.getPromiseDetails()`",
 	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
 	"main": "./dist/index.js",
