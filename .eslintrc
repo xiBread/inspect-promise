@@ -16,5 +16,8 @@
 	"parserOptions": {
 		"ecmaVersion": "latest",
 		"project": "./tsconfig.json"
-	}
+	},
+	"ignorePatterns": [
+		"*.js"
+	]
 }
