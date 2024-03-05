@@ -10,9 +10,9 @@
 		"./extend": "./dist/extend.js"
 	},
 	"files": [
+		"build",
 		"dist",
-		"lib",
-		"binding.gyp"
+		"src"
 	],
 	"scripts": {
 		"build": "rm -rf dist && tsc --build && node-gyp rebuild",
