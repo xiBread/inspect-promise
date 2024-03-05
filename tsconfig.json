@@ -1,13 +1,13 @@
 {
 	"compilerOptions": {
 		"lib": [
-			"ESNext"
+			"ES2023"
 		],
-		"module": "CommonJS",
+		"target": "ES2022",
+		"module": "Node16",
+		"moduleResolution": "Node16",
 		"outDir": "dist",
-		"target": "ESNext",
 		"strict": true,
-		"moduleResolution": "node",
 		"skipLibCheck": true,
 	},
 	"include": [
