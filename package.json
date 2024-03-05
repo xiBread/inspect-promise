@@ -15,7 +15,8 @@
 		"src"
 	],
 	"scripts": {
-		"build": "rm -rf dist && tsc --build && node-gyp rebuild",
+		"install": "npm run build",
+		"build": "rimraf dist && tsc --build && node-gyp rebuild",
 		"style": "npm run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "npm run lint -- --fix",
@@ -48,6 +49,7 @@
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.2.5",
+		"rimraf": "^5.0.5",
 		"typescript": "^5.3.3"
 	}
 }
