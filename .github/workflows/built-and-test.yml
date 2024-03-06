@@ -40,6 +40,9 @@ jobs:
       - name: Package
         run: yarn build
 
+      - name: Test
+        run: yarn vitest run
+
   aarch64:
     name: aarch64
     runs-on: ${{ matrix.os }}
@@ -74,3 +77,6 @@ jobs:
 
       - name: Build TypeScript
         run: yarn tsc --build
+
+      - name: Test
+        run: yarn vitest run
