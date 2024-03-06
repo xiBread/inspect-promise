@@ -16,4 +16,7 @@
 		"lib/*.ts",
 		"node-pre-gyp.d.ts"
 	],
+	"exclude": [
+		"lib/*.test.ts"
+	]
 }
