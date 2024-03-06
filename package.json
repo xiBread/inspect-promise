@@ -10,15 +10,19 @@
 		"./extend": "./dist/extend.js"
 	},
 	"files": [
-		"build",
 		"dist",
-		"src"
+		"src",
+		"binding.gyp"
 	],
 	"scripts": {
-		"build": "rm -rf dist && tsc --build && node-gyp rebuild",
-		"style": "npm run lint:fix && prettier",
+		"install": "node-pre-gyp install --fallback-to-build",
+		"clean": "node scripts/clean.js",
+		"build": "node-pre-gyp configure build package && tsc --build",
+		"build:from-source": "node-pre-gyp install --fallback-to-build --build-from-source",
+		"test": "node-pre-gyp configure build && vitest run ./lib/index.test.ts",
+		"style": "yarn run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
-		"lint:fix": "npm run lint -- --fix",
+		"lint:fix": "yarn run lint -- --fix",
 		"prettier": "prettier -w src"
 	},
 	"repository": {
@@ -39,15 +43,41 @@
 	"prettier": {
 		"printWidth": 100,
 		"tabWidth": 4,
-		"useTabs": true
+		"useTabs": true,
+		"overrides": [
+			{
+				"files": [
+					"*.yml"
+				],
+				"options": {
+					"tabWidth": 2,
+					"useTabs": false
+				}
+			}
+		]
+	},
+	"binary": {
+		"module_name": "inspectPromise",
+		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
+		"host": "https://github.com/xiBread/inspect-promise/releases/download/",
+		"remote_path": "v{version}",
+		"package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}.tar.gz",
+		"pkg_path": "."
+	},
+	"dependencies": {
+		"@mapbox/node-pre-gyp": "^1.0.11"
 	},
 	"devDependencies": {
+		"@actions/core": "^1.10.1",
+		"@actions/github": "^6.0.0",
+		"@actions/glob": "^0.4.0",
 		"@types/node": "^20.11.24",
 		"@typescript-eslint/eslint-plugin": "^7.1.1",
 		"@typescript-eslint/parser": "^7.1.1",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.2.5",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"vitest": "^1.3.1"
 	}
 }

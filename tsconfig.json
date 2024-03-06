@@ -13,6 +13,7 @@
 		"declarationDir": "dist",
 	},
 	"include": [
-		"lib/*"
+		"lib/*",
+		"node-pre-gyp.d.ts"
 	],
 }

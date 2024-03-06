@@ -1,9 +1,14 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+import path from "node:path";
+import { find } from "@mapbox/node-pre-gyp";
+
 interface Binding {
 	inspectPromise(promise: Promise<unknown>): [number, unknown];
 }
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const binding = require(require.resolve("../build/Release/inspectPromise.node")) as Binding;
+const bindingPath = find(path.resolve(path.join(__dirname, "../package.json")));
+const binding = require(bindingPath) as Binding;
 
 export type PromiseState = (typeof states)[number];
 
