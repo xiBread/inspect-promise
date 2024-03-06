@@ -1,0 +1,16 @@
+name: Upload release artifact
+description: Upload release artifacts
+inputs:
+  path:
+    description: Glob pattern
+    required: true
+  release-tag:
+    description: Release tag
+    required: false
+  content-type:
+    description: Content type
+    required: false
+    default: application/octet-stream
+runs:
+  using: node20
+  main: index.js

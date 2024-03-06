@@ -15,8 +15,10 @@
 		"src"
 	],
 	"scripts": {
-		"install": "npm run build",
-		"build": "rimraf dist && tsc --build && node-gyp rebuild",
+		"install": "node-pre-gyp install --fallback-to-build",
+		"clean": "node scripts/clean.js",
+		"build": "pnpm node-pre-gyp configure build package && tsc --build",
+		"build:from-source": "node-pre-gyp install --fallback-to-build --build-from-source",
 		"style": "npm run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "npm run lint -- --fix",
@@ -40,7 +42,18 @@
 	"prettier": {
 		"printWidth": 100,
 		"tabWidth": 4,
-		"useTabs": true
+		"useTabs": true,
+		"overrides": [
+			{
+				"files": [
+					"*.yml"
+				],
+				"options": {
+					"tabWidth": 2,
+					"useTabs": false
+				}
+			}
+		]
 	},
 	"binary": {
 		"module_name": "inspect_promise",
@@ -54,13 +67,15 @@
 		"@mapbox/node-pre-gyp": "^1.0.11"
 	},
 	"devDependencies": {
+		"@actions/core": "^1.10.1",
+		"@actions/github": "^6.0.0",
+		"@actions/glob": "^0.4.0",
 		"@types/node": "^20.11.24",
 		"@typescript-eslint/eslint-plugin": "^7.1.1",
 		"@typescript-eslint/parser": "^7.1.1",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.2.5",
-		"rimraf": "^5.0.5",
 		"typescript": "^5.3.3"
 	}
 }
