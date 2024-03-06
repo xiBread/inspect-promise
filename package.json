@@ -1,6 +1,6 @@
 {
 	"name": "inspect-promise",
-	"version": "2.0.5",
+	"version": "2.0.6",
 	"description": "Reimplements Node's `util.getPromiseDetails()`",
 	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
 	"main": "./dist/index.js",
@@ -56,10 +56,10 @@
 	},
 	"binary": {
 		"module_name": "inspectPromise",
-		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
+		"module_path": "./prebuild/{module_name}-{platform}-{arch}/",
 		"host": "https://github.com/xiBread/inspect-promise/releases/download/",
-		"remote_path": "v{version}",
-		"package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}.tar.gz",
+		"remote_path": "{version}",
+		"package_name": "{module_name}-{version}-{platform}-{arch}.tar.gz",
 		"pkg_path": "."
 	},
 	"dependencies": {
