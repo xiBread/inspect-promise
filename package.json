@@ -20,6 +20,7 @@
 		"build": "node-pre-gyp configure build package && tsc --build",
 		"build:from-source": "node-pre-gyp install --fallback-to-build --build-from-source",
 		"test": "node-pre-gyp configure build && vitest run ./lib/index.test.ts",
+		"prepack": "yarn build",
 		"style": "yarn run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "yarn run lint -- --fix",
