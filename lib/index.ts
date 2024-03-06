@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 import path from "node:path";
 import { find } from "@mapbox/node-pre-gyp";
 
