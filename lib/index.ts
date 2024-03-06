@@ -7,7 +7,7 @@ interface Binding {
 	inspectPromise(promise: Promise<unknown>): [number, unknown];
 }
 
-const bindingPath = require(find(path.resolve(path.join(__dirname, "../package.json"))));
+const bindingPath = find(path.resolve(path.join(__dirname, "../package.json")));
 const binding = require(bindingPath) as Binding;
 
 export type PromiseState = (typeof states)[number];
