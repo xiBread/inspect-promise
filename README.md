@@ -18,8 +18,6 @@ There are two ways you can use this package:
 1. Import normally as a function
 
 ```ts
-import inspectPromise from "inspect-promise";
-// or
 import { inspectPromise } from "inspect-promise";
 
 const p = Promise.resolve(100);
@@ -41,7 +39,7 @@ Both result in the same output:
 
 ```js
 {
-  status: "pending",
+  status: "fulfilled",
   value: 100
 }
 ```
