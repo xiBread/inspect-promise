@@ -17,11 +17,11 @@
 	"scripts": {
 		"install": "node-pre-gyp install --fallback-to-build",
 		"clean": "node scripts/clean.js",
-		"build": "pnpm node-pre-gyp configure build package && tsc --build",
+		"build": "yarn node-pre-gyp configure build package && tsc --build",
 		"build:from-source": "node-pre-gyp install --fallback-to-build --build-from-source",
-		"style": "npm run lint:fix && prettier",
+		"style": "yarn run lint:fix && prettier",
 		"lint": "eslint src --ext .ts",
-		"lint:fix": "npm run lint -- --fix",
+		"lint:fix": "yarn run lint -- --fix",
 		"prettier": "prettier -w src"
 	},
 	"repository": {
