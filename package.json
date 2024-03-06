@@ -56,7 +56,7 @@
 		]
 	},
 	"binary": {
-		"module_name": "inspect_promise",
+		"module_name": "inspectPromise",
 		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
 		"host": "https://github.com/xiBread/inspect-promise/releases/download/",
 		"remote_path": "v{version}",
