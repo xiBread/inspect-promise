@@ -5,7 +5,7 @@
 			"sources": [
 				"src/binding.cc"
 			],
-			"product_dir": "<(module_name)"
+			"product_dir": "<(module_path)"
 		}
 	]
 }
