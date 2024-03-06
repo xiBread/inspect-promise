@@ -10,9 +10,9 @@
 		"./extend": "./dist/extend.js"
 	},
 	"files": [
-		"build",
 		"dist",
-		"src"
+		"src",
+		"binding.gyp"
 	],
 	"scripts": {
 		"install": "node-pre-gyp install --fallback-to-build",
